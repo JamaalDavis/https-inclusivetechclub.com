@@ -1,0 +1,6 @@
+{
+  "name": "Inclusive Tech Club",
+  "description": "An interactive digital platform for the Practice Maturity Path, the Inclusive Tech Club, and the Inclusive Tech Accelerator.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
