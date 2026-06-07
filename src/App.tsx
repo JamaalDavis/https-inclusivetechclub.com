@@ -228,17 +228,17 @@ export default function App() {
             >
               {activeView === 'home' && (
                 <div id="home-view" className="space-y-20">
-                  {/* HERO BLOCK - Screenshot 1 Layout */}
+                  {/* HERO BLOCK */}
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                     <div className="space-y-6">
                       <span className="font-mono text-xs uppercase tracking-widest text-[#006a61] bg-[#89f5e7]/20 px-3 py-1 rounded font-semibold">
                         Inclusive Tech Club
                       </span>
                       <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-extrabold text-black leading-tight tracking-tight">
-                        Build technology that includes people before harm gets shipped.
+                        Build technology that includes people from the start.
                       </h1>
                       <p className="font-sans text-base text-on-surface-variant leading-relaxed">
-                        Inclusive Tech Club helps designers, researchers, product managers, technologists, and teams turn inclusive design values into practical audits, workshops, requirements, and product decisions.
+                        Inclusive Tech Hub helps design teams and technical leaders audit, govern, and rethink their digital products. We provide the frameworks and training needed to shift from reactionary fixes to intentional accessibility.
                       </p>
 
                       <div className="flex flex-wrap gap-4 pt-4">
@@ -299,49 +299,247 @@ export default function App() {
                     </div>
                   </div>
 
-                  {/* Secondary highlight widgets block */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pt-8">
-                    <div className="bg-white p-8 rounded-xl border border-muted-border shadow-3xs space-y-4">
-                      <span className="font-mono text-xs uppercase bg-[#89f5e7]/20 text-[#006a61] px-2.5 py-1 rounded font-bold">01</span>
-                      <h3 className="font-display text-lg font-bold text-black">Velocity Skill Pack</h3>
-                      <p className="font-sans text-xs text-on-surface-variant leading-relaxed">
-                        Calibrate customizable prompts and custom rules directly targeting inclusive, accessible, and ethically-grounded features during core build phases.
-                      </p>
-                      <button
-                        onClick={() => setActiveView('blueprint')}
-                        className="font-sans text-xs font-bold text-black flex items-center gap-1 pt-1"
-                      >
-                        Configure Skill Pack <ChevronRight className="w-3.5 h-3.5" aria-hidden="true" />
-                      </button>
-                    </div>
+                  {/* Problem Section */}
+                  <div className="bg-surface-container-low p-8 md:p-12 rounded-2xl border border-muted-border text-center max-w-3xl mx-auto flex flex-col gap-4">
+                    <span className="text-[#006a61] font-mono text-xs uppercase tracking-widest font-bold">
+                      The Challenge
+                    </span>
+                    <h2 className="font-display text-2xl md:text-3xl font-bold text-black leading-tight">
+                      Technology is moving faster than most teams can responsibly evaluate.
+                    </h2>
+                    <p className="font-sans text-sm text-on-surface-variant leading-relaxed">
+                      In the rush to &quot;ship fast,&quot; the marginalized often get left behind. We believe excellence in technology isn't measured by speed, but by how many people can use it safely and with dignity. We help you slow down to ship with care.
+                    </p>
+                  </div>
 
-                    <div className="bg-white p-8 rounded-xl border border-muted-border shadow-3xs space-y-4">
-                      <span className="font-mono text-xs uppercase bg-emerald-50 text-emerald-800 px-2.5 py-1 rounded font-bold">02</span>
-                      <h3 className="font-display text-lg font-bold text-black">Self-Paced Curriculum</h3>
-                      <p className="font-sans text-xs text-on-surface-variant leading-relaxed">
-                        10 rigorous, self-paced modules equipped with downloadable heuristic sheets, bias audits, and red-teaming sheets.
+                  {/* Pillars Section (Focus Areas) */}
+                  <div className="space-y-8">
+                    <h2 className="font-display text-2xl font-bold text-black text-center md:text-left">
+                      Our Focus Areas
+                    </h2>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                      {/* Focus 1 */}
+                      <div className="bg-white border border-muted-border p-8 rounded-xl flex flex-col gap-4 hover:border-black transition-all duration-300 shadow-3xs">
+                        <div className="w-12 h-12 bg-[#89f5e7]/20 rounded-lg flex items-center justify-center text-[#006a61]">
+                          <Layers className="w-6 h-6" aria-hidden="true" />
+                        </div>
+                        <h3 className="font-display text-lg font-bold text-black leading-tight">
+                          Inclusive AI &amp; Algorithmic Harm
+                        </h3>
+                        <p className="font-sans text-xs text-on-surface-variant leading-relaxed">
+                          Auditing automated systems for bias and developing human-centric governance models for emerging tech.
+                        </p>
+                      </div>
+
+                      {/* Focus 2 */}
+                      <div className="bg-white border border-muted-border p-8 rounded-xl flex flex-col gap-4 hover:border-black transition-all duration-300 shadow-3xs">
+                        <div className="w-12 h-12 bg-[#89f5e7]/20 rounded-lg flex items-center justify-center text-[#006a61]">
+                          <Award className="w-6 h-6" aria-hidden="true" />
+                        </div>
+                        <h3 className="font-display text-lg font-bold text-black leading-tight">
+                          Accessibility &amp; Service Design
+                        </h3>
+                        <p className="font-sans text-xs text-on-surface-variant leading-relaxed">
+                          Moving beyond WCAG compliance to create seamless, dignified journeys for people of all abilities.
+                        </p>
+                      </div>
+
+                      {/* Focus 3 */}
+                      <div className="bg-white border border-muted-border p-8 rounded-xl flex flex-col gap-4 hover:border-black transition-all duration-300 shadow-3xs">
+                        <div className="w-12 h-12 bg-[#89f5e7]/20 rounded-lg flex items-center justify-center text-[#006a61]">
+                          <Compass className="w-6 h-6" aria-hidden="true" />
+                        </div>
+                        <h3 className="font-display text-lg font-bold text-black leading-tight">
+                          Cross-Cultural &amp; Community-Led
+                        </h3>
+                        <p className="font-sans text-xs text-on-surface-variant leading-relaxed">
+                          Integrating participatory design methods to ensure products respect local contexts and lived experiences.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Offer Section */}
+                  <div className="bg-black text-white p-8 md:p-12 rounded-2xl grid grid-cols-1 md:grid-cols-3 gap-8 md:divide-x md:divide-neutral-800">
+                    {/* Offer 1 */}
+                    <div className="space-y-4 md:pr-8">
+                      <span className="font-mono text-xs uppercase tracking-wider text-[#89f5e7] font-bold">01. READ</span>
+                      <h3 className="font-display text-lg font-bold">Articles</h3>
+                      <p className="font-sans text-xs text-neutral-400 leading-relaxed">
+                        Deep dives into ethics, policy, and the practicalities of building inclusive software.
                       </p>
                       <button
                         onClick={() => setActiveView('curriculum')}
-                        className="font-sans text-xs font-bold text-black flex items-center gap-1 pt-1"
+                        className="inline-flex items-center gap-2 font-mono text-xs text-[#89f5e7] hover:underline transition-all cursor-pointer font-semibold"
                       >
-                        See Syllabus Artifacts <ChevronRight className="w-3.5 h-3.5" aria-hidden="true" />
+                        Browse Library
+                        <ChevronRight className="w-3.5 h-3.5" aria-hidden="true" />
                       </button>
                     </div>
 
-                    <div className="bg-white p-8 rounded-xl border border-muted-border shadow-3xs space-y-4">
-                      <span className="font-mono text-xs uppercase bg-amber-50 text-amber-800 px-2.5 py-1 rounded font-bold">03</span>
-                      <h3 className="font-display text-lg font-bold text-black">Accelerator Bootcamps</h3>
-                      <p className="font-sans text-xs text-on-surface-variant leading-relaxed">
-                        Apply to join a multi-department digital workspace build cohort focused on building safety, compliance, and ROI metrics in three weeks.
+                    {/* Offer 2 */}
+                    <div className="space-y-4 md:px-8">
+                      <span className="font-mono text-xs uppercase tracking-wider text-[#89f5e7] font-bold">02. LEARN</span>
+                      <h3 className="font-display text-lg font-bold">Workshops</h3>
+                      <p className="font-sans text-xs text-neutral-400 leading-relaxed">
+                        Hands-on intensives for designers and PMs looking to upskill in inclusive methodologies.
                       </p>
                       <button
                         onClick={() => setActiveView('accelerator')}
-                        className="font-sans text-xs font-bold text-black flex items-center gap-1 pt-1"
+                        className="inline-flex items-center gap-2 font-mono text-xs text-[#89f5e7] hover:underline transition-all cursor-pointer font-semibold"
                       >
-                        Cohort Details <ChevronRight className="w-3.5 h-3.5" aria-hidden="true" />
+                        View Schedule
+                        <ChevronRight className="w-3.5 h-3.5" aria-hidden="true" />
                       </button>
                     </div>
+
+                    {/* Offer 3 */}
+                    <div className="space-y-4 md:pl-8">
+                      <span className="font-mono text-xs uppercase tracking-wider text-[#89f5e7] font-bold">03. BUILD</span>
+                      <h3 className="font-display text-lg font-bold">Claude Skill Pack</h3>
+                      <p className="font-sans text-xs text-neutral-400 leading-relaxed">
+                        Tailored system instructions files that load directly into your Claude Code workspace context.
+                      </p>
+                      <button
+                        onClick={() => setActiveView('blueprint')}
+                        className="inline-flex items-center gap-2 font-mono text-xs text-[#89f5e7] hover:underline transition-all cursor-pointer font-semibold"
+                      >
+                        Get Skill Pack
+                        <ChevronRight className="w-3.5 h-3.5" aria-hidden="true" />
+                      </button>
+                    </div>
+                  </div>
+
+                  {/* Featured Resources */}
+                  <div className="space-y-8">
+                    <div className="flex justify-between items-end">
+                      <div>
+                        <h2 className="font-display text-2xl font-bold text-black">
+                          Featured Resources
+                        </h2>
+                        <p className="font-sans text-sm text-on-surface-variant leading-relaxed mt-1">
+                          Practical tools for your next project.
+                        </p>
+                      </div>
+                      <button
+                        onClick={() => setActiveView('curriculum')}
+                        className="font-sans text-xs font-bold text-[#006a61] hover:underline cursor-pointer"
+                      >
+                        View All Resources
+                      </button>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                      {/* Resource 1 */}
+                      <div className="bg-white border border-muted-border rounded-xl overflow-hidden group hover:shadow-lg transition-all duration-300 flex flex-col">
+                        <div className="h-40 bg-[#89f5e7]/10 flex items-center justify-center text-[#006a61]">
+                          <CheckCircle2 className="w-12 h-12" aria-hidden="true" />
+                        </div>
+                        <div className="p-6 flex flex-col gap-3 flex-1">
+                          <span className="bg-[#89f5e7]/30 text-[#006a61] text-[10px] font-mono font-bold px-2 py-0.5 rounded w-fit uppercase">
+                            CHECKLIST
+                          </span>
+                          <h3 className="font-display text-base font-bold text-black group-hover:text-[#006a61] transition-colors leading-snug">
+                            Ableist Harm Metrics Checklist
+                          </h3>
+                          <p className="font-sans text-xs text-on-surface-variant leading-relaxed">
+                            A rigorous 20-point framework for auditing algorithmic systems against physical and cognitive bias.
+                          </p>
+                        </div>
+                      </div>
+
+                      {/* Resource 2 */}
+                      <div className="bg-white border border-muted-border rounded-xl overflow-hidden group hover:shadow-lg transition-all duration-300 flex flex-col">
+                        <div className="h-40 bg-[#89f5e7]/10 flex items-center justify-center text-[#006a61]">
+                          <Milestone className="w-12 h-12" aria-hidden="true" />
+                        </div>
+                        <div className="p-6 flex flex-col gap-3 flex-1">
+                          <span className="bg-[#89f5e7]/30 text-[#006a61] text-[10px] font-mono font-bold px-2 py-0.5 rounded w-fit uppercase">
+                            TEMPLATE
+                          </span>
+                          <h3 className="font-display text-base font-bold text-black group-hover:text-[#006a61] transition-colors leading-snug">
+                            Inclusive Service Blueprint Template
+                          </h3>
+                          <p className="font-sans text-xs text-on-surface-variant leading-relaxed">
+                            Map out complex digital-to-physical journeys with integrated accessibility touchpoints.
+                          </p>
+                        </div>
+                      </div>
+
+                      {/* Resource 3 */}
+                      <div className="bg-white border border-muted-border rounded-xl overflow-hidden group hover:shadow-lg transition-all duration-300 flex flex-col">
+                        <div className="h-40 bg-[#89f5e7]/10 flex items-center justify-center text-[#006a61]">
+                          <BookOpen className="w-12 h-12" aria-hidden="true" />
+                        </div>
+                        <div className="p-6 flex flex-col gap-3 flex-1">
+                          <span className="bg-[#89f5e7]/30 text-[#006a61] text-[10px] font-mono font-bold px-2 py-0.5 rounded w-fit uppercase">
+                            GUIDE
+                          </span>
+                          <h3 className="font-display text-base font-bold text-black group-hover:text-[#006a61] transition-colors leading-snug">
+                            Designing for Neurodivergence
+                          </h3>
+                          <p className="font-sans text-xs text-on-surface-variant leading-relaxed">
+                            Best practices for UI patterns that reduce cognitive load and sensory overwhelm.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Membership Teaser */}
+                  <div className="bg-[#004f47] text-white rounded-2xl p-8 md:p-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-center relative overflow-hidden">
+                    <div className="absolute top-0 right-0 w-64 h-64 bg-[#89f5e7] opacity-10 rounded-full blur-3xl -mr-32 -mt-32 pointer-events-none" />
+                    <div className="space-y-6 relative z-10">
+                      <h2 className="font-display text-2xl md:text-3xl font-bold leading-tight">
+                        Join a learning space for people building technology with care.
+                      </h2>
+                      <ul className="space-y-3">
+                        <li className="flex items-center gap-3 text-xs font-sans text-neutral-200">
+                          <CheckCircle2 className="w-4 h-4 text-[#89f5e7]" aria-hidden="true" />
+                          <span>Monthly live audit sessions</span>
+                        </li>
+                        <li className="flex items-center gap-3 text-xs font-sans text-neutral-200">
+                          <CheckCircle2 className="w-4 h-4 text-[#89f5e7]" aria-hidden="true" />
+                          <span>Private community for practitioners</span>
+                        </li>
+                        <li className="flex items-center gap-3 text-xs font-sans text-neutral-200">
+                          <CheckCircle2 className="w-4 h-4 text-[#89f5e7]" aria-hidden="true" />
+                          <span>Early access to new research and templates</span>
+                        </li>
+                      </ul>
+                      <button
+                        onClick={() => setActiveView('accelerator')}
+                        className="bg-white text-[#004f47] hover:bg-neutral-100 px-6 py-3 rounded-lg font-sans text-xs font-bold transition shadow-md cursor-pointer block w-fit"
+                      >
+                        Join the Founding Member List
+                      </button>
+                    </div>
+
+                    <div className="hidden md:block relative z-10 aspect-video rounded-xl overflow-hidden border border-emerald-800 shadow-xl">
+                      <img
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlMKpcoMdLZSIxB2LSPgfAMe1-oEzjH2D52Ms2ZHeHnX_Dkob5KdjcqjY9iEgzIbwDsmDyAgxpK90_23URBGdv9QlsEXW6BGrQr_vJjj9128pUyTf6QLX3B0DY7B2Y8PoS0kf4rpjy8yajZsGNzSxnr4M2dalzFS5kZbxReCmA6Z8RTN6ZwV9ZdObhg4F-Ci9z3wePsQwB3lSbpyi4GkzRbkBVbq-w-nLU6WjAirq5eA0fXz-3MiP3hKWMHDHM_ge9Up6heBvLQTaN"
+                        alt="Diverse team of tech professionals collaborating around a table"
+                        className="object-cover w-full h-full grayscale"
+                      />
+                    </div>
+                  </div>
+
+                  {/* Services Teaser */}
+                  <div className="border-y border-muted-border py-12 flex flex-col md:flex-row justify-between items-center gap-8">
+                    <div className="max-w-xl text-center md:text-left">
+                      <h2 className="font-display text-xl font-bold text-black">
+                        Bring inclusive design practice into your team.
+                      </h2>
+                      <p className="font-sans text-xs text-on-surface-variant mt-2 leading-relaxed">
+                        We offer bespoke training, institutional audits, and long-term advisory for forward-thinking organizations.
+                      </p>
+                    </div>
+                    <button
+                      onClick={() => setActiveView('accelerator')}
+                      className="border-2 border-black text-black px-6 py-3 rounded-lg font-sans text-xs font-bold hover:bg-neutral-50 transition cursor-pointer"
+                    >
+                      Book Team Training
+                    </button>
                   </div>
                 </div>
               )}
